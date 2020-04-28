@@ -1,0 +1,16 @@
+html {
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0px;
+    padding: 0px;    
+}
+
+.header {
+    height: 100vh;
+    background-image: url(../graphics/header.svg);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-position: center;
+}
