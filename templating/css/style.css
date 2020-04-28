@@ -20,6 +20,3 @@ body {
     border-radius: 100%;
 }
 
-.bg-primary-gradient {
-    background: linear-gradient(to right, #e3292a, #dc4748);
-}
