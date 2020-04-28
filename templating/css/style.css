@@ -9,8 +9,17 @@ body {
 
 .header {
     height: 100vh;
+
     background-image: url(../graphics/header.svg);
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-position: center;
+}
+
+.brand-image {
+    border-radius: 100%;
+}
+
+.bg-primary-gradient {
+    background: linear-gradient(to right, #e3292a, #dc4748);
 }

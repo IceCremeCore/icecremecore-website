@@ -1,0 +1,24 @@
+{
+  "name": "icecremecore-website",
+  "version": "1.0.0",
+  "description": "The new Official IceCremeCore Website",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "sass": "node-sass -w templating/scss/ -o templating/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IceCremeCore/icecremecore-website.git"
+  },
+  "author": "Supreme.Icecreme",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/IceCremeCore/icecremecore-website/issues"
+  },
+  "homepage": "https://github.com/IceCremeCore/icecremecore-website#readme"
+}
