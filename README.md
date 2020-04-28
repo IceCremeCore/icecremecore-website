@@ -1,2 +1,2 @@
 # IceCremeCore Website
-The new Official Website for IceCremeCore
+The new Official IceCremeCore Website.
