@@ -50,7 +50,7 @@
 //
 // Used for brand, project, or site names.
 
-.navbar-brand {
+.brand {
   display: inline-block;
   padding-top: $navbar-brand-padding-y;
   padding-bottom: $navbar-brand-padding-y;
@@ -58,6 +58,7 @@
   @include font-size($navbar-brand-font-size);
   line-height: inherit;
   white-space: nowrap;
+  font-family: $font-family-sans-serif;
 
   @include hover-focus() {
     text-decoration: none;
@@ -225,7 +226,7 @@
 
 // Dark links against a light background
 .navbar-light {
-  .navbar-brand {
+  .brand {
     color: $navbar-light-brand-color;
 
     @include hover-focus() {
@@ -278,7 +279,7 @@
 
 // White links against a dark background
 .navbar-dark {
-  .navbar-brand {
+  .brand {
     color: $navbar-dark-brand-color;
 
     @include hover-focus() {
