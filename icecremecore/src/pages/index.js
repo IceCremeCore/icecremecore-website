@@ -4,7 +4,7 @@ import { Link } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
-const IndexPage = () => (
+const FrontPage = () => (
   <Layout>
     <SEO title="Home" />
     <header class="d-flex align-items-center">
@@ -23,4 +23,4 @@ const IndexPage = () => (
   </Layout>
 )
 
-export default IndexPage
+export default FrontPage
