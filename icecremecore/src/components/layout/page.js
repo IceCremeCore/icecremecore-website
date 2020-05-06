@@ -9,14 +9,14 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Navbar from "./navbar"
-import Footer from "./footer"
-import "./css/style.css"
-import "./css/bootstrap.css"
+import Navbar from "../navbar"
+import Footer from "../footer"
+import "../css/style.css"
+import "../css/bootstrap.css"
 
-const Layout = ({ children }) => {
+export default function Page({ children }) {
   const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
+    query PageTitleQuery {
       site {
         siteMetadata {
           title
@@ -36,8 +36,6 @@ const Layout = ({ children }) => {
   )
 }
 
-Layout.propTypes = {
+Page.propTypes = {
   children: PropTypes.node.isRequired,
 }
-
-export default Layout

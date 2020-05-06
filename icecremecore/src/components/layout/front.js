@@ -2,35 +2,33 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Navbar from "./navbar"
-import Footer from "./footer"
-import "./css/style.css"
-import "./css/bootstrap.css"
+import Navbar from "../navbar"
+import Footer from "../footer"
+import "../css/style.css"
+import "../css/bootstrap.css"
 
-const FrontLayout = ({ children }) => {
+export default function Front({ children }) {
     const data = useStaticQuery(graphql`
-      query SiteTitleQuery {
+    query FrontTitleQuery {
         site {
-          siteMetadata {
+            siteMetadata {
             title
-          }
+            }
         }
-      }
+    }
     `)
-  
+
     return (
-      <>
+        <>
         <Navbar siteTitle={data.site.siteMetadata.title} />
         <div>
-          <main>{children}</main>
+            {children}
         </div>
         <Footer siteTitle={data.site.siteMetadata.title} />
-      </>
+        </>
     )
-  }
-  
-  FrontLayout.propTypes = {
+}
+
+Front.propTypes = {
     children: PropTypes.node.isRequired,
-  }
-  
-  export default FrontLayout
+}
