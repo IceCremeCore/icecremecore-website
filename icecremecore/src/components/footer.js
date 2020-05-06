@@ -32,8 +32,8 @@ const Footer = ({siteTitle}) => (
                 <div className="col-md-4 col-sm-12">
                     <h5 className="pt-2">Socials</h5>
                     <ul className="list-unstyled">
-                    <li><a href="https://instagram.com/Supreme.Icecreme" target="_blank" className="text-light"><i className="fab fa-instagram"></i> @Supreme.Icecreme</a></li>
-                    <li><a href="https://twitter.com/SupremeIcecreme" target="_blank" className="text-light"><i className="fab fa-twitter"></i> @SupremeIcecreme</a></li>
+                    <li><a href="https://instagram.com/Supreme.Icecreme" target="_blank" rel="noopener noreferrer" className="text-light"><i className="fab fa-instagram"></i> @Supreme.Icecreme</a></li>
+                    <li><a href="https://twitter.com/SupremeIcecreme" target="_blank" rel="noopener noreferrer" className="text-light"><i className="fab fa-twitter"></i> @SupremeIcecreme</a></li>
                     </ul>
                 </div>
             </div>
