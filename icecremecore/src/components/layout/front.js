@@ -12,7 +12,7 @@ export default function Front({ children }) {
     query FrontTitleQuery {
         site {
             siteMetadata {
-            title
+                title
             }
         }
     }
@@ -21,9 +21,15 @@ export default function Front({ children }) {
     return (
         <>
         <Navbar siteTitle={data.site.siteMetadata.title} />
-        <div>
+        <header className="d-flex align-items-center">
+            <div className="container flex-column text-light mb-5 pb-3">
+                <h1 className="display-4">Hello World!</h1>
+                <p className="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis doloremque mollitia corrupti optio hic deserunt quasi incidunt dolorum ipsam, aut ducimus? Ex, soluta? Totam laudantium expedita doloribus dicta, nemo aliquam!</p>
+            </div>  
+        </header>
+        <section className="container mt-5">
             {children}
-        </div>
+        </section>
         <Footer siteTitle={data.site.siteMetadata.title} />
         </>
     )
