@@ -28,7 +28,7 @@ export default function Page({ children }) {
   return (
     <>
       <Navbar siteTitle={data.site.siteMetadata.title} />
-      <div>
+      <div className="container mt-5 pt-5">
         <main>{children}</main>
       </div>
       <Footer siteTitle={data.site.siteMetadata.title} />
