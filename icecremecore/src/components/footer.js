@@ -1,4 +1,4 @@
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import BrandImage from "./BrandImage"
@@ -18,16 +18,40 @@ const Footer = ({siteTitle}) => (
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <h5 className="pt-2">Blog posts</h5>
-                    <div className="footer-post">
-                        <h6>Example post</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellendus.</p>
-                        <hr/>
-                    </div>
-                    <div className="footer-post">
-                        <h6>Example post</h6>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque, repellendus.</p>
-                        <hr/>
-                    </div>
+                    <StaticQuery
+                        query={graphql`
+                            {
+                                allContentfulBlogPost(limit: 2) {
+                                    edges {
+                                        node {
+                                            id
+                                            title
+                                            slug
+                                            description {
+                                                internal {
+                                                content
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        `}
+                        render={data => (
+                            <>
+                            <div className="footer-post">
+                                <h6><Link to={`blog/`+data.allContentfulBlogPost.edges[0].node.slug} className="text-light">{data.allContentfulBlogPost.edges[0].node.title}</Link></h6>
+                                <p>{data.allContentfulBlogPost.edges[0].node.description.internal.content}</p>
+                                <hr/>
+                            </div>
+                            <div className="footer-post">
+                                <h6><Link to={`blog/`+data.allContentfulBlogPost.edges[1].node.slug} className="text-light">{data.allContentfulBlogPost.edges[1].node.title}</Link></h6>
+                                <p>{data.allContentfulBlogPost.edges[1].node.description.internal.content}</p>
+                                <hr/>
+                            </div>
+                            </>
+                        )}
+                    />
                 </div>
                 <div className="col-md-4 col-sm-12">
                     <h5 className="pt-2">Socials</h5>
