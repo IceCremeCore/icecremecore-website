@@ -15,7 +15,8 @@ const Navbar = ({ siteTitle }) => (
 
       <div className="collapse navbar-collapse" id="navbarSupportedContent">
         <ul className="navbar-nav ml-auto">
-          <li className="nav-item" id="nav-home"><Link to="/" className="nav-link" activeClassName="active">Home</Link></li>
+          <li className="nav-item"><Link to="/" className="nav-link" activeClassName="active">Home</Link></li>
+          <li className="nav-item"><Link to="/blog" className="nav-link" activeClassName="active" partiallyActive={true}>Blog</Link></li>
         </ul>
       </div>
     </div>
