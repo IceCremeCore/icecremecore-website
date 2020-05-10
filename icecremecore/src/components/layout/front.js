@@ -4,7 +4,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "../navbar"
 import Footer from "../footer"
-import "../css/style.css"
 import "../css/bootstrap.css"
 
 export default function Front({ children }) {
@@ -21,7 +20,7 @@ export default function Front({ children }) {
     return (
         <>
         <Navbar siteTitle={data.site.siteMetadata.title} />
-        <header className="d-flex align-items-center">
+        <header className="front-landing d-flex align-items-center">
             <div className="container flex-column text-light mb-5 pb-3">
                 <h1 className="display-4">Hello World!</h1>
                 <p className="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis doloremque mollitia corrupti optio hic deserunt quasi incidunt dolorum ipsam, aut ducimus? Ex, soluta? Totam laudantium expedita doloribus dicta, nemo aliquam!</p>

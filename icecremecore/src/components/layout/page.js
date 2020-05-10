@@ -11,7 +11,6 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Navbar from "../navbar"
 import Footer from "../footer"
-import "../css/style.css"
 import "../css/bootstrap.css"
 
 export default function Page({ children }) {

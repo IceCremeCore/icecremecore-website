@@ -43,8 +43,11 @@
 html {
   font-family: sans-serif;
   line-height: 1.15;
+  margin: 0px;
+  padding: 0px;
   -webkit-text-size-adjust: 100%;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); 
+}
 
 article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
   display: block; }
@@ -7149,3 +7152,19 @@ a.text-dark:hover, a.text-dark:focus {
 
 .bg-gradient {
   background: linear-gradient(to right, #e3292a, #dc4748); }
+
+.front-landing {
+  height: 100vh;
+  background-image: url(../../images/header.svg);
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-position: center;
+}
+
+.post-head {
+  margin-bottom: 1.5rem;
+}
+
+.post-title {
+  margin-bottom: 0px;
+}
