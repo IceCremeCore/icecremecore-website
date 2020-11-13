@@ -6,7 +6,7 @@ import { Link, graphql } from "gatsby"
 const BlogHome = ({data}) => (
     <Layout>
         <SEO title="Blog" />
-        <h3>Blog</h3>
+        <h1>Blog</h1>
         <p className="lead">This is a blog.</p>
         <div className="posts">
             {data.allContentfulBlogPost.edges.map(post => (
