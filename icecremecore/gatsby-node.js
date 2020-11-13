@@ -19,6 +19,9 @@ exports.createPages = ({ graphql, actions }) => {
                             childContentfulRichText{
                                 html
                             }
+                            internal{
+                                content
+                            }
                         }
                         author{
                             name
